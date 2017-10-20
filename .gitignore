@@ -1,0 +1,4 @@
+# Ignore these files
+.sass-cache/
+style.css.map
+.DS_Store
