@@ -7,24 +7,6 @@
 // ======================================================================================================
 
 // --------------------------------------------------
-// Fonts
-// --------------------------------------------------
-@mixin declare-font-face($font-family, $font-filename, $font-weight : normal, $font-style :normal, $font-stretch : normal) {
-  @font-face {
-    font-family: '#{$font-family}';
-    src: url('#{$font-filename}.eot');
-    src: url('#{$font-filename}.eot?#iefix') format('embedded-opentype'),
-        url('#{$font-filename}.woff2') format('woff2'),
-         url('#{$font-filename}.woff') format('woff'),
-         url('#{$font-filename}.ttf') format('truetype'),
-         url('#{$font-filename}.svg##{$font-family}') format('svg');
-    font-style: $font-style;
-    font-stretch: $font-stretch;
-    font-weight: $font-weight;
-  }
-}
-
-// --------------------------------------------------
 // Utils
 // --------------------------------------------------
 // Clearfix Mixin
@@ -47,16 +29,6 @@
 
 @mixin square($size) {
   @include size($size, $size);
-}
-
-@mixin square-responsive() {
-  width: 100%;
-
-  &:after {
-    content: '';
-    display: block;
-    padding-bottom: 100%;
-  }
 }
 
 // --------------------------------------------------
@@ -83,55 +55,6 @@
   margin: auto;
   position: absolute;
   right: $right;
-}
-
-// ------------------------------------------------
-// Font Styles
-// ------------------------------------------------
-@mixin font-smoothing() {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@mixin truncate-text(){
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-@mixin text-gradient($color1, $color2) {
-  span {
-    color: $white;
-    background: -webkit-linear-gradient(left, $white 0%, $white 50%, $color1 50%, $color2 100%);
-    background-position: 200%;
-    background-size: 200% 100%;
-    transition:
-      background 0.325s ease-in-out,
-      color 0.325s ease-in-out;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  &:hover {
-    span { background-position: 100%; }
-  }
-}
-
-@mixin linear-gradient($direction, $color1, $color2) {
-  background: linear-gradient(to $direction, $color1 0%, $color2 100%);
-}
-
-@mixin linear-gradient-hover($direction, $color1, $color2, $color3, $color4) {
-  background: linear-gradient(to $direction, $color1 0%, $color2 50%, $color3 50%, $color4 100%);
-  transition: background 400ms cubic-bezier(0.895, 0.030, 0.685, 0.220);
-
-  @if $direction == 'bottom' {
-    background-size: 100% 205%;
-    background-position: 0% 99%;
-  } @else {
-    background-size: 205% 100%;
-    background-position: 99%;
-  }
 }
 
 // --------------------------------------------------
@@ -171,26 +94,6 @@ $breakpoints: (
 }
 
 // --------------------------------------------------
-// Image Directory Shortcut
-// --------------------------------------------------
-@function image-url($image) {
-  @return url("/assets/#{$image}");
-}
-
-// --------------------------------------------------
-// Retina Media Query
-// --------------------------------------------------
-@mixin retina() {
-  @media (-webkit-min-device-pixel-ratio: 2),
-         (-moz-min-device-pixel-ratio: 2),
-         (-o-min-device-pixel-ratio: 3/2),
-         (min-device-pixel-ratio: 2),
-         (min-resolution: 192dpi) {
-    @content;
-  }
-}
-
-// --------------------------------------------------
 // Keyframe
 // --------------------------------------------------
 @mixin animation($animate...) {
@@ -223,28 +126,4 @@ $breakpoints: (
   @keyframes #{$animationName} {
     @content;
   }
-}
-
-// --------------------------------------------------
-// Rem Calculator
-// --------------------------------------------------
-@mixin font-size($sizeValue) {
-  font-size: $sizeValue + px;
-  font-size: ($sizeValue / 10) + rem;
-}
-
-// --------------------------------------------------
-// Photoshop to CSS Letter Spacing Calcuation
-// --------------------------------------------------
-@mixin letter-spacing($spacingValue) {
-  letter-spacing: ($spacingValue / 1000) + em;
-}
-
-// --------------------------------------------------
-// Alpha
-// --------------------------------------------------
-@mixin alpha-attribute($attribute, $color) {
-  $percent: alpha($color) * 100%;
-  $opaque: opacify($color, 1);
-  #{$attribute}: $color;
 }
