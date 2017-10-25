@@ -17,9 +17,11 @@
         $form.removeClass('is-active')
       } else {
         $nav.removeClass('is-sticky');
-      };
-    }
+      }
 
+    } else {
+      $nav.removeClass('is-sticky');
+    }
     return;
   };
 
@@ -29,8 +31,9 @@
     return;
   };
 
+  // Submit form on search click if filled out
   function toggleSearchbar() {
-    if ($form.hasClass('is-active')) {
+    if ($form.hasClass('is-active') && !!$input.val().length) {
       $form.submit()
     } else {
       $form.toggleClass('is-active')
@@ -43,6 +46,14 @@
   $(window).on('scroll', function() {
     stickyNav();
   });
+
+  $(window).on('resize', function() {
+    stickyNav();
+  })
+
+  $(window).on('load', function() {
+    stickyNav();
+  })
 
   // On click reveal mobile nav
   $btn.on('click', function() {

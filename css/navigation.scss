@@ -1,5 +1,7 @@
 // ======================================================================================================
+//
 // ALL NAVIGATION STYLES
+//
 // ======================================================================================================
 
 header { top: 65px; }
@@ -27,6 +29,7 @@ header { top: 65px; }
   }
 }
 
+// When nav is fixed on desktop
 .site-header.is-sticky {
   height: 160px;
   position: relative;
@@ -37,12 +40,18 @@ header { top: 65px; }
   }
 
   .custom-logo {
+    left: 50%;
     position: fixed;
     top: 23px;
+    transform: translateX(-50%);
     width: 100px;
     z-index: 9;
-    left: 50%;
-    transform: translateX(-50%);
+  }
+
+  .site-search {
+    position: fixed;
+    top: 23px;
+    z-index: 9;
   }
 
   .primary-navigation {
@@ -52,10 +61,27 @@ header { top: 65px; }
 
   @include breakpoint(md) {
     .custom-logo {
+      left: 0;
+      top: 15px;
+      transform: none;
+      width: 80px;
+    }
+
+    .site-search { right: 3px; }
+  }
+
+  @include breakpoint(lg) {
+    .custom-logo { left: 30px; }
+    .site-search { right: 30px; }
+  }
+
+  @include breakpoint(xl) {
+    .custom-logo {
       left: 45px;
       top: 10px;
-      transform: none;
+      width: 100px;
     }
+    .site-search { right: 60px; }
   }
 }
 
@@ -93,7 +119,10 @@ header { top: 65px; }
   &.is-closed { max-height: 0; }
 
   @include breakpoint(md) {
-    &.is-closed { max-height: 65px; }
+    &.is-closed {
+      max-height: none;
+      overflow: visible;
+    }
   }
 }
 
@@ -101,7 +130,6 @@ header { top: 65px; }
   display: flex;
   flex-direction: column;
   font-family: $font-serif;
-  height: 320px;
   justify-content: space-around;
   list-style: none;
   margin: auto;
@@ -116,14 +144,11 @@ header { top: 65px; }
 
   @include breakpoint(xl) {
     padding: 0 100px;
-    // width: 60%;
   }
 }
 
 .nav-menu > .menu-item {
   padding: 20px;
-
-  // &:hover { > a:after { width: 100%; } }
 
   a {
     color: $navy;
@@ -136,11 +161,14 @@ header { top: 65px; }
 .menu-item-has-children {
   position: static;
 
-  &:hover {
-    .subnav { max-height: 200px; }
+  @include breakpoint(md) {
+    &:hover {
+      .subnav { max-height: 200px; }
+    }
   }
 }
 
+// Hover reveal nav
 .subnav {
   background-color: $purple;
   display: flex;
@@ -161,6 +189,7 @@ header { top: 65px; }
 .sub-menu {
   height: auto;
   padding-left: 10%;
+  padding-top: 10px;
 
   .menu-item {
     list-style: none;
@@ -232,7 +261,6 @@ header { top: 65px; }
   position: absolute;
   right: 60px;
   top: 45px;
-  width: 33%;
 
   form { margin: 0 5px; }
   #menu-secondary {
@@ -265,4 +293,9 @@ header { top: 65px; }
 
 .woocommerce-product-search.is-active {
   .search-field { width: 80%; }
+}
+
+// Infinite scroll loader
+.yith-infs {
+  max-width: 100px;
 }

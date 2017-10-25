@@ -1,0 +1,150 @@
+// ======================================================================================================
+//
+// Wishlist and account pages
+//
+// ======================================================================================================
+
+.entry-content div.woocommerce {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 320px);
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(lg) {
+    min-height: calc(100vh - 400px);
+    flex-direction: row;
+    padding: 0;
+    width: 80%;
+  }
+}
+
+.woocommerce-message {
+  background: $transparent-purple;
+  display: block;
+  padding: 10px;
+  position: relative;
+  transform: none;
+
+  @include breakpoint(lg) {
+    left: 50%;
+    position: absolute;
+    top: -100px;
+    transform: translateX(-50%);
+  }
+}
+
+.woocommerce-MyAccount-navigation {
+  padding: 25px 0;
+  width: 100%;
+
+  ul {
+    border-bottom: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+  }
+
+  .is-active a {
+    background: $transparent-purple;
+    font-weight: 400;
+  }
+
+  li {
+    border: none;
+    width: 33%;
+    position: relative;
+
+    a {
+      display: block;
+      padding: 20px 0;
+      transition: background 0.6s;
+      @include center-all();
+
+      &:hover {
+        background: $transparent-purple;
+        &:after { width: 0; }
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding: 0;
+    width: 25%;
+
+    ul {
+      border-bottom: 1px solid $purple;
+      flex-direction: column;
+    }
+
+    li {
+      border-top: 1px solid $purple;
+      width: 100%;
+
+      a {
+        padding: 20px;
+        position: relative;
+        transform: none;
+      }
+    }
+  }
+}
+
+.woocommerce-MyAccount-content {
+  padding-left: 0;
+  width: 100%;
+
+  @include breakpoint(lg) {
+    padding-left: 50px;
+    width: 75%;
+  }
+}
+
+.woocommerce-EditAccountForm {
+  background-color: $transparent-purple;
+  padding: 10px;
+
+  fieldset {
+    background-color: none;
+    border: none;
+    margin-top: 1em;
+    margin: 0;
+    padding: 0;
+
+    legend {
+      display: block;
+      font-family: $font-serif;
+      margin-bottom: 0;
+      padding-top: 2em;
+    }
+  }
+
+  label {
+    display: block;
+    text-align: left;
+  }
+
+  @include breakpoint(lg) {
+    background-color: transparent;
+    padding: 0;
+
+    fieldset {
+      background-color: $transparent-purple;
+      margin-top: 1em;
+      margin: 0;
+      padding: 1.5em;
+
+      legend { margin-bottom: -1em; }
+    }
+  }
+}
+
+.woocommerce-Input {
+  display: block;
+  padding: 10px;
+  width: 100%;
+}

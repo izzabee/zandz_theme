@@ -19,6 +19,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'css/navigation.scss';
 @import 'css/products.scss';
 @import 'css/pages.scss';
+@import 'css/admin.scss';
+// @import 'css/woocommerce/woocommerce.scss';
 
 body {
   // background-color: $transparent-purple;
@@ -81,7 +83,6 @@ img {
 // ======================================================================================================
 // Home page styles
 // ======================================================================================================
-
 
 .home-section {
   background-attachment: fixed;
@@ -243,7 +244,7 @@ input#s {
 .footer {
   background-color: $purple;
   font-family: $font-sans-serif;
-  padding: 30px;
+  padding: 30px 15px;
   position: relative;
   text-align: center;
 
@@ -255,14 +256,10 @@ input#s {
     bottom: 0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     position: relative;
-    right: 80px;
-
-    @include breakpoint(lg) {
-      bottom: 30px;
-      position: absolute;
-    }
+    right: intial;
+    width: 100%;
   }
 
   a { padding-left: 10px; }
@@ -271,4 +268,29 @@ input#s {
     height: auto;
     width: 20px;
   }
+
+  @include breakpoint(lg) {
+    padding: 30px;
+
+    aside {
+      bottom: 30px;
+      justify-content: flex-end;
+      position: absolute;
+      right: 80px;
+      width: auto;
+    }
+  }
+}
+
+// ======================================================================================================
+// SVG interactions
+// ======================================================================================================
+
+.svg-hover { svg * { transition: all 0.6s } }
+
+.svg-hover--fill {
+  &:hover { svg * { fill: lighten($navy, 50%); } }
+}
+.svg-hover--stroke {
+  &:hover { svg * { stroke: lighten($navy, 50%); } }
 }
