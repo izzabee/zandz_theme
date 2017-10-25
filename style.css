@@ -12,6 +12,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url(css/normalize.css);
+@import url(css/vendor/flexslider.css);
 .page-title {
   color: #182954;
   font-family: "Playfair Display", Times, serif;
@@ -63,6 +64,9 @@ a {
     width: 0; }
   a:hover:after {
     width: 100%; }
+
+.link--no-underline:hover:after {
+  width: 0; }
 
 .large-link {
   font-family: "Playfair Display", Times, serif;
@@ -497,6 +501,8 @@ header {
   flex-wrap: wrap; }
   .product .cart {
     display: none; }
+  .product .woocommerce-tabs {
+    display: none; }
 
 .woocommerce-product-gallery {
   flex-grow: 2;
@@ -506,6 +512,11 @@ header {
     .woocommerce-product-gallery {
       order: 1;
       width: 50%; } }
+
+.woocommerce-product-details__short-description {
+  order: 3; }
+  .woocommerce-product-details__short-description p {
+    margin: 0; }
 
 .summary {
   display: flex;
@@ -526,12 +537,17 @@ header {
   .summary .product_title {
     order: 1; }
   .summary .price {
-    order: 3; }
-  .summary .yith-wcwl-add-to-wishlist {
     order: 4; }
+  .summary .yith-wcwl-add-to-wishlist {
+    order: 5; }
   .summary .product_meta {
     padding-bottom: 30px;
     order: 2; }
+    .summary .product_meta a {
+      color: #869cff; }
+      .summary .product_meta a:after {
+        background-color: #869cff;
+        bottom: -1px; }
 
 .related {
   order: 3;
@@ -594,6 +610,127 @@ header {
 
 .zoomImg {
   display: none !important; }
+
+.home-section {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 60px);
+  margin: 0 15px;
+  position: relative; }
+  .home-section:first-of-type {
+    background-image: url("images/home_1.jpg"); }
+  .home-section:nth-of-type(2) {
+    background-image: url("images/diamond_education"); }
+  .home-section:last-of-type {
+    background-image: url("images/home_3.jpg"); }
+  .home-section .large-link {
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%); }
+  @media (min-width: 767px) {
+    .home-section {
+      margin: 0 50px; }
+      .home-section .large-link {
+        left: 50px;
+        transform: none; } }
+
+.home-social {
+  margin: 0 15px;
+  padding: 30px 30px 0; }
+  .home-social p {
+    font-family: "Playfair Display", Times, serif;
+    font-style: italic;
+    padding-bottom: 20px;
+    text-align: center; }
+  @media (min-width: 767px) {
+    .home-social {
+      margin: 0 50px;
+      padding: 50px 0; } }
+
+.home-scroll-helper {
+  bottom: 10px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  opacity: 1;
+  text-align: center;
+  transition: opacity 0.3s;
+  width: 300px;
+  z-index: 9; }
+  .home-scroll-helper svg {
+    width: 50px; }
+
+.insta-feed {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%; }
+  .insta-feed a {
+    width: 100%;
+    height: 100%; }
+    .insta-feed a:after {
+      background-color: #c2cdff;
+      background-image: url("images/instagram.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100px;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: opacity 0.6s;
+      width: 100%; }
+    .insta-feed a:hover:after {
+      opacity: 0.6; }
+  @media (min-width: 767px) {
+    .insta-feed {
+      flex-direction: row;
+      margin: 0 auto; }
+      .insta-feed a {
+        width: 50%;
+        height: 50%; } }
+  @media (min-width: 1024px) {
+    .insta-feed a {
+      width: 25%;
+      height: 25%; } }
+
+.insta-img {
+  height: auto;
+  position: relative;
+  width: 100%; }
+  .insta-img:after {
+    background-color: rgba(134, 156, 255, 0.15);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.6s;
+    width: 100%; }
+
+.content {
+  margin-top: 64px; }
+  @media (min-width: 767px) {
+    .content {
+      margin-top: 0; } }
+
+.site-content {
+  background-color: rgba(134, 156, 255, 0.15);
+  margin: 0 15px; }
+  @media (min-width: 767px) {
+    .site-content {
+      margin: 0 50px; } }
 
 .entry-header {
   width: 100%; }
@@ -934,112 +1071,8 @@ img {
     .hidden-tablet--inline {
       display: inline; } }
 
-.home-section {
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  height: calc(100vh - 60px);
-  margin: 0 15px;
-  position: relative; }
-  .home-section:first-of-type {
-    background-image: url("images/home_1.jpg"); }
-  .home-section:nth-of-type(2) {
-    background-image: url("images/diamond_education"); }
-  .home-section:last-of-type {
-    background-image: url("images/home_3.jpg"); }
-  .home-section .large-link {
-    position: absolute;
-    bottom: 130px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%); }
-  @media (min-width: 767px) {
-    .home-section {
-      margin: 0 50px; }
-      .home-section .large-link {
-        left: 50px;
-        transform: none; } }
-
-.home-social {
-  margin: 0 15px;
-  padding: 30px 30px 0; }
-  .home-social p {
-    font-family: "Playfair Display", Times, serif;
-    font-style: italic;
-    padding-bottom: 20px;
-    text-align: center; }
-  @media (min-width: 767px) {
-    .home-social {
-      margin: 0 50px;
-      padding: 50px 0; } }
-
-.insta-feed {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%; }
-  .insta-feed a {
-    width: 100%;
-    height: 100%; }
-    .insta-feed a:after {
-      background-color: #c2cdff;
-      background-image: url("images/instagram.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 100px;
-      bottom: 0;
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transition: opacity 0.6s;
-      width: 100%; }
-    .insta-feed a:hover:after {
-      opacity: 0.6; }
-  @media (min-width: 767px) {
-    .insta-feed {
-      flex-direction: row;
-      margin: 0 auto; }
-      .insta-feed a {
-        width: 50%;
-        height: 50%; } }
-  @media (min-width: 1024px) {
-    .insta-feed a {
-      width: 25%;
-      height: 25%; } }
-
-.insta-img {
-  height: auto;
-  position: relative;
-  width: 100%; }
-  .insta-img:after {
-    background-color: rgba(134, 156, 255, 0.15);
-    bottom: 0;
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: opacity 0.6s;
-    width: 100%; }
-
-.content {
-  margin-top: 64px; }
-  @media (min-width: 767px) {
-    .content {
-      margin-top: 0; } }
-
-.site-content {
-  background-color: rgba(134, 156, 255, 0.15);
-  margin: 0 15px; }
-  @media (min-width: 767px) {
-    .site-content {
-      margin: 0 50px; } }
+.is-invisible {
+  opacity: 0; }
 
 .searchform {
   margin: 0 auto; }
@@ -1092,6 +1125,40 @@ input#s {
         position: absolute;
         right: 80px;
         width: auto; } }
+
+@-webkit-keyframes arrowBounce {
+  0% {
+    transform: translatey(0px); }
+  50% {
+    transform: translatey(10px); }
+  100% {
+    transform: translatey(0px); } }
+@-moz-keyframes arrowBounce {
+  0% {
+    transform: translatey(0px); }
+  50% {
+    transform: translatey(10px); }
+  100% {
+    transform: translatey(0px); } }
+@-o-keyframes arrowBounce {
+  0% {
+    transform: translatey(0px); }
+  50% {
+    transform: translatey(10px); }
+  100% {
+    transform: translatey(0px); } }
+@keyframes arrowBounce {
+  0% {
+    transform: translatey(0px); }
+  50% {
+    transform: translatey(10px); }
+  100% {
+    transform: translatey(0px); } }
+.animated-svg.arrow g {
+  -webkit-animation: arrowBounce 2s ease-in-out infinite;
+  -moz-animation: arrowBounce 2s ease-in-out infinite;
+  -o-animation: arrowBounce 2s ease-in-out infinite;
+  animation: arrowBounce 2s ease-in-out infinite; }
 
 .svg-hover svg * {
   transition: all 0.6s; }

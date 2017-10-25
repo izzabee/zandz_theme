@@ -20,10 +20,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'css/products.scss';
 @import 'css/pages.scss';
 @import 'css/admin.scss';
-// @import 'css/woocommerce/woocommerce.scss';
+@import 'css/vendor/flexslider.css';
 
 body {
-  // background-color: $transparent-purple;
   font-family: $font-sans-serif;
   font-weight: 300;
 }
@@ -47,7 +46,6 @@ img {
 // ======================================================================================================
 // Helper classes
 // ======================================================================================================
-
 
 .is-visible-mobile {
   display: block;
@@ -80,138 +78,7 @@ img {
   @include breakpoint(lg) { display: inline; }
 }
 
-// ======================================================================================================
-// Home page styles
-// ======================================================================================================
-
-.home-section {
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  height: calc(100vh - 60px);
-  margin: 0 15px;
-  position: relative;
-
-  &:first-of-type  { background-image: url('images/home_1.jpg'); }
-  &:nth-of-type(2) { background-image: url('images/diamond_education'); }
-  &:last-of-type   { background-image: url('images/home_3.jpg'); }
-
-  .large-link {
-    position: absolute;
-    bottom: 130px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-
-  @include breakpoint(md) {
-    margin: 0 50px;
-
-    .large-link {
-      left: 50px;
-      transform: none;
-    }
-  }
-}
-
-.home-social {
-  margin: 0 15px;
-  padding: 30px 30px 0;
-
-  p {
-    font-family: $font-serif;
-    font-style: italic;
-    padding-bottom: 20px;
-    text-align: center;
-  }
-
-  @include breakpoint(md) {
-    margin: 0 50px;
-    padding: 50px 0;
-  }
-}
-
-.insta-feed {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-
-  a {
-    @include square(100%);
-
-    &:after {
-      background-color: $purple;
-      background-image: url('images/instagram.svg');
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: 100px;
-      bottom: 0;
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transition: opacity 0.6s;
-      width: 100%;
-    }
-
-    &:hover { &:after { opacity: 0.6; } }
-  }
-
-  @include breakpoint(md) {
-    flex-direction: row;
-    margin: 0 auto;
-
-    a { @include square(50%) }
-  }
-
-  @include breakpoint(lg) {
-    a { @include square(25%) }
-  }
-}
-
-.insta-img {
-  height: auto;
-  position: relative;
-  width: 100%;
-
-  &:after {
-    background-color: $transparent-purple;
-    bottom: 0;
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: opacity 0.6s;
-    width: 100%;
-  }
-}
-
-// ======================================================================================================
-// page styles
-// ======================================================================================================
-
-.content {
-  margin-top: 64px;
-
-  @include breakpoint(md) { margin-top: 0; }
-}
-
-.site-content {
-  background-color: $transparent-purple;
-  margin: 0 15px;
-
-  @include breakpoint(md) {
-    margin: 0 50px;
-  }
-}
+.is-invisible { opacity: 0; }
 
 // ======================================================================================================
 // Form styles
@@ -285,6 +152,15 @@ input#s {
 // ======================================================================================================
 // SVG interactions
 // ======================================================================================================
+@include keyframes(arrowBounce) {
+  0%   { transform: translatey(0px); }
+  50%  { transform: translatey(10px); }
+  100% { transform: translatey(0px); }
+}
+
+.animated-svg.arrow {
+  g { @include animation(arrowBounce 2s ease-in-out infinite); }
+}
 
 .svg-hover { svg * { transition: all 0.6s } }
 
