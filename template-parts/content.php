@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for home page
+ * The template for content pages
  *
  * @package WordPress
  * @subpackage ZandZ
@@ -9,14 +9,19 @@
 
 get_header(); ?>
 
-<article id="post-<?php the_ID(); ?>" class="site-content--post" <?php post_class(); ?>>
-  <?php
-    /* translators: %s: Name of current post */
-    the_content( sprintf(
-      __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'zandz' ),
-      get_the_title()
-    ) );
-  ?>
+<article id="post-<?php the_ID(); ?>" class="site-content site-content--post" <?php post_class(); ?>>
+  <header class="entry-header">
+    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+  </header><!-- .entry-header -->
+  <div class="entry-content <?php str_replace('/\s+/', '-', the_title()); ?>">
+    <?php the_content(); ?>
+    <?php
+      wp_link_pages( array(
+        'before' => '<div class="zandz-content">' . __( 'Pages:', 'zandz' ),
+        'after'  => '</div>',
+      ) );
+    ?>
+  </div><!-- .entry-content -->
 </article>
 
 <?php get_footer(); ?>

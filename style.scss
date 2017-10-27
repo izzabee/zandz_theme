@@ -39,8 +39,13 @@ body {
 }
 
 img {
-  // height: auto;
+  height: auto;
   width: 100%;
+}
+
+img.max-size--500 {
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 // ======================================================================================================
@@ -162,7 +167,11 @@ input#s {
   g { @include animation(arrowBounce 2s ease-in-out infinite); }
 }
 
-.svg-hover { svg * { transition: all 0.6s } }
+.svg-hover {
+  transition: all 0.6s;
+  svg * { transition: all 0.6s }
+  &:hover { opacity: 0.6; &:after { width: 0; } }
+}
 
 .svg-hover--fill {
   &:hover { svg * { fill: lighten($navy, 50%); } }

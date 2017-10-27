@@ -7,6 +7,7 @@
 .entry-content div.woocommerce {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   min-height: calc(100vh - 320px);
   margin: 0 auto;
   padding: 0 10px;
@@ -23,17 +24,12 @@
 
 .woocommerce-message {
   background: $transparent-purple;
+  border-top-color: $purpleDark;
   display: block;
-  padding: 10px;
   position: relative;
-  transform: none;
+  width: 100%;
 
-  @include breakpoint(lg) {
-    left: 50%;
-    position: absolute;
-    top: -100px;
-    transform: translateX(-50%);
-  }
+  &:before { color: $purpleDark; }
 }
 
 .woocommerce-MyAccount-navigation {

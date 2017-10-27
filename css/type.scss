@@ -37,7 +37,7 @@
 .product_title {
   color: $navy;
   font-family: $font-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
   margin: 10px 0;
   text-decoration: none;
@@ -72,6 +72,12 @@ a {
 
   &:hover { &:after { width: 100%; } }
 }
+
+// Disable underline on links
+.link--no-underline:hover {
+  &:after { width: 0; }
+}
+
 
 .large-link {
   font-family: $font-serif;
@@ -121,14 +127,16 @@ a {
 
 .button,
 .btn {
-  background-color: $purple;
-  border-radius: 4px;
-  display: inline-block;
-  padding: 10px;
-  transition: all 0.6s;
+  background-color: $purple !important;
+  border-radius: 4px !important;
+  color: $navy !important;
+  display: inline-block !important;
+  font-weight: normal !important;
+  padding: 10px !important;
+  transition: all 0.6s !important;
 
   &:after { width: 0; }
-  &:hover { background-color: $purpleDark; &:after { width: 0; } }
+  &:hover { background-color: $purpleDark !important; &:after { width: 0; } }
 }
 
 // ======================================================================================================

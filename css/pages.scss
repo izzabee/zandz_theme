@@ -71,6 +71,7 @@
   svg { width: 50px; }
 }
 
+#sbi_images,
 .insta-feed {
   display: flex;
   flex-direction: column;
@@ -78,8 +79,6 @@
   width: 100%;
 
   a {
-    @include square(100%);
-
     &:after {
       background-color: $purple;
       background-image: url('images/instagram.svg');
@@ -104,15 +103,10 @@
   @include breakpoint(md) {
     flex-direction: row;
     margin: 0 auto;
-
-    a { @include square(50%) }
-  }
-
-  @include breakpoint(lg) {
-    a { @include square(25%) }
   }
 }
 
+.sbi_photo,
 .insta-img {
   height: auto;
   position: relative;
@@ -134,7 +128,7 @@
 }
 
 // ======================================================================================================
-// page styles
+// Regular content page styles
 // ======================================================================================================
 
 .content {
@@ -156,7 +150,6 @@
 // Blog page / Upcoming Shows page
 // ======================================================================================================
 
-// .entry-header { display: none; }
 .entry-header {
   width: 100%;
 
@@ -174,7 +167,6 @@
     width: 60%;
   }
 }
-
 
 .entry-meta { display: none; }
 .entry-content {
@@ -201,7 +193,7 @@
 
   @include breakpoint(lg) {
     width: 49%;
-    &:nth-of-type(even) { border-left: 5px dotted $transparent-purple; }
+    &:nth-of-type(odd) { border-right: 5px dotted $transparent-purple; }
   }
 }
 
@@ -211,14 +203,6 @@
 .page-header {
   width: 100%;
 
-  h2 {
-    font-family: $font-serif;
-    font-size: 1.2rem;
-    margin: 0 auto;
-    text-align: center;
-    width: 90%;
-  }
-
   @include breakpoint(lg) {
     margin: 0 auto;
     width: 60%;
@@ -227,8 +211,16 @@
 
 .page-subheader {
   font-family: $font-serif;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 0 15px;
   text-align: center;
-  width: 100%;
+  width: 90%;
+
+  @include breakpoint(md) {
+    margin-top: 0;
+    padding: 0;
+  }
 }
 
 .header-image {
@@ -241,14 +233,16 @@
   flex-direction: column;
   height: 300px;
   margin: 0 auto;
+  padding-top: 0;
   width: 90%;
 
   @include breakpoint(lg) {
     flex-direction: row;
     height: 500px;
+    padding-top: 20px;
 
-    &:hover > figure { width: 25%; }
-    &:hover > figure:hover { width: 50%; }
+    &:hover > span { width: 25%; }
+    &:hover > span:hover { width: 50%; }
   }
 }
 
@@ -333,6 +327,10 @@
     padding: 50px;
     width: 50%;
   }
+}
+
+figure.grid--block {
+  margin: 0;
 }
 
 .grid--60 {
