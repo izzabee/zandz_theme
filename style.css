@@ -47,12 +47,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
       font-size: 40px; } }
 
 a {
-  color: #182954;
+  color: #869cff;
   display: inline-block;
   position: relative;
   text-decoration: none; }
   a:after {
-    background-color: #182954;
+    background-color: #869cff;
     bottom: -5px;
     content: '';
     display: inline-block;
@@ -138,6 +138,9 @@ a {
 
 .type--white {
   color: #fff; }
+
+.type--navy {
+  color: #182954; }
 
 header {
   top: 65px; }
@@ -1093,6 +1096,12 @@ img.max-size--500 {
     .is-visible-desktop--flex {
       display: flex; } }
 
+.is-visible-desktop--inline {
+  display: none; }
+  @media (min-width: 767px) {
+    .is-visible-desktop--inline {
+      display: inline; } }
+
 .hidden-tablet--inline {
   display: inline; }
   @media (min-width: 767px) {
@@ -1142,11 +1151,13 @@ input#s {
     position: relative;
     right: intial;
     width: 100%; }
-  .footer a {
-    padding-left: 10px; }
+    .footer aside a {
+      padding-left: 10px; }
   .footer svg {
     height: auto;
     width: 20px; }
+  .footer .spacer {
+    padding: 0 10px; }
   @media (min-width: 1024px) {
     .footer {
       padding: 30px; }

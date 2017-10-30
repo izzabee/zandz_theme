@@ -77,6 +77,12 @@ img.max-size--500 {
   @include breakpoint(md) { display: flex; }
 }
 
+.is-visible-desktop--inline {
+  display: none;
+
+  @include breakpoint(md) { display: inline; }
+}
+
 .hidden-tablet--inline {
   display: inline;
 
@@ -133,14 +139,16 @@ input#s {
     position: relative;
     right: intial;
     width: 100%;
-  }
 
-  a { padding-left: 10px; }
+    a { padding-left: 10px; }
+  }
 
   svg {
     height: auto;
     width: 20px;
   }
+
+  .spacer { padding: 0 10px; }
 
   @include breakpoint(lg) {
     padding: 30px;

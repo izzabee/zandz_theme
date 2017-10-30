@@ -52,13 +52,13 @@
 // ======================================================================================================
 
 a {
-  color: $navy;
+  color: $purpleDark;
   display: inline-block;
   position: relative;
   text-decoration: none;
 
   &:after {
-    background-color: $navy;
+    background-color: $purpleDark;
     bottom: -5px;
     content: '';
     display: inline-block;
@@ -149,3 +149,4 @@ a {
 .type--center{ text-align: center !important; }
 .type--large { font-size: 1.5rem !important; }
 .type--white { color: #fff; }
+.type--navy { color: $navy; }

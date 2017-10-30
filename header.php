@@ -107,7 +107,7 @@
             <ul class="sub-menu">
               <li id="menu-item-1041" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1041"><a href="/product-category/topten/" title="View Z&Z's Our Top Ten">Our Top Ten</a></li>
               <li id="menu-item-1151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1151"><a href="#" title="View Z&Z's Special Occasions">Special Occasions</a></li>
-              <li id="menu-item-1048" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1048"><a href="/product-category/affordable-gifts/">Gifts under $600</a></li>
+              <li id="menu-item-1048" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1048"><a href="/product-category/affordable-gifts/">Gifts under $1000</a></li>
             </ul>
           </div>
         </li>

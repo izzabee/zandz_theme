@@ -4,6 +4,9 @@
     <!-- Social media links -->
     <p>© Zwikker and Zacher <?php echo date('Y') ?></p>
     <p>Crashy Zacher Brown, Marijke Zwikker Stern, Caitlin Clark &amp; Mimi Cushing</p>
+    <p>
+      <a href="mailto:info@zwikkerandzacher.com" title="Email Zwikker and Zacher" class="type--navy">info@zwikkerandzacher.com</a><span class="spacer is-visible-desktop--inline">|</span><a href="tel:212-869-4465" title="Call Zwikker and Zacher" class="type--navy">+1 212-869-4465</a>
+    </p>
     <aside>
       <p>Follow Us: </p>
       <a href="https://www.facebook.com/zwikkerandzacher/" target="_blank" title="Go to Z&Z Facebook" class="svg-hover">
