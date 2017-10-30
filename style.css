@@ -265,6 +265,8 @@ header {
     font-size: 1.2em;
     text-transform: uppercase;
     text-decoration: none; }
+    .nav-menu > .menu-item a:after {
+      background: #182954; }
 
 .menu-item-has-children {
   position: static; }
@@ -394,6 +396,7 @@ header {
   flex-wrap: wrap;
   justify-content: normal;
   list-style: none;
+  margin: 0;
   padding: 0 20px 50px 20px; }
   @media (min-width: 767px) {
     .products {
@@ -742,17 +745,13 @@ header {
       margin-top: 0; } }
 
 #content,
-.content,
-.content-area,
-.site-content {
+.content-area {
   background-color: rgba(134, 156, 255, 0.15);
   margin: 0 15px;
   min-height: calc(100vh - 213px); }
   @media (min-width: 767px) {
     #content,
-    .content,
-    .content-area,
-    .site-content {
+    .content-area {
       margin: 0 50px;
       min-height: calc(100vh - 274px); } }
 
@@ -783,6 +782,8 @@ header {
     margin-top: 0; }
   .entry-content p {
     width: 100%; }
+  .entry-content.Wishlist {
+    flex-direction: column; }
   @media (min-width: 1024px) {
     .entry-content {
       text-align: left; } }

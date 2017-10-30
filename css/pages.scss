@@ -131,9 +131,7 @@
 }
 
 #content,
-.content,
-.content-area,
-.site-content {
+.content-area {
   background-color: $transparent-purple;
   margin: 0 15px;
   min-height: calc(100vh - 213px);
@@ -185,6 +183,8 @@
   h3 + p { margin-top: 0; }
 
   p { width: 100%; }
+
+  &.Wishlist { flex-direction: column; }
 
   @include breakpoint(lg) {
     text-align: left;
