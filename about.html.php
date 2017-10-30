@@ -9,11 +9,11 @@
         </header>
 
         <article>
-          <div class="hover-image__panel">
-            <figure class="hover-image__photo"></figure>
-            <figure class="hover-image__photo"></figure>
-            <figure class="hover-image__photo"></figure>
-          </div>
+          <ul class="hover-image__panel">
+            <li class="hover-image__photo"></li>
+            <li class="hover-image__photo"></li>
+            <li class="hover-image__photo"></li>
+          </ul>
           <div class="our-story">
             <div class="entry-content">
               <p>Using their jewelry-loving energy, Marijke and Crashy started Z&amp;Z by merging Fifth Avenue quality with affordable 47th Street prices. As a word of mouth business, with low overhead, they became known for quality, value and customer service. From diamond engagement rings and unique charm bracelets, to diamond solitaire necklaces, and custom designed projects, Z&amp;Z’s jewelry has become a well-known name in the jewelry world.</p>

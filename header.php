@@ -94,27 +94,41 @@
           <a href="http://www.zwikkerandzacher.com/product-category/zzcollection/" title="View Z&Z fine jewelry collection">Collection</a>
           <div class="subnav">
             <ul class="sub-menu">
-              <li id="menu-item-1014" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1014"><a href="/product-category/zzcollection/earrings/" title="View Z&Z's Earrings">Earrings</a></li>
-              <li id="menu-item-1018" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1018"><a href="/product-category/zzcollection/necklaces/" title="View Z&Z's Necklaces">Necklaces &amp; Pendants</a></li>
-              <li id="menu-item-1022" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1022"><a href="/product-category/zzcollection/rings/" title="View Z&Z's Rings">Rings</a></li>
-              <li id="menu-item-1026" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1026"><a href="/product-category/zzcollection/bracelets/" title="View Z&Z's Bracelets">Bracelets</a></li>
+              <li id="menu-item-1014" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1014"><a href="/product-category/zzcollection/earrings/" title="View Z&Z's Earrings">Earrings</a></li>
+              <li id="menu-item-1018" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1018"><a href="/product-category/zzcollection/necklaces/" title="View Z&Z's Necklaces">Necklaces &amp; Pendants</a></li>
+              <li id="menu-item-1022" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1022"><a href="/product-category/zzcollection/rings/" title="View Z&Z's Rings">Rings</a></li>
+              <li id="menu-item-1026" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1026"><a href="/product-category/zzcollection/bracelets/" title="View Z&Z's Bracelets">Bracelets</a></li>
             </ul>
             <ul class="sub-menu">
               <li id="menu-item-1035" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1035"><a href="/product-category/zzcollection/custom-designs-1/" title="View Z&Z's Custom Designs">Custom Designs</a></li>
-              <li id="menu-item-1030" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-1030"><a href="/product-category/zzcollection/more/" title="View Z&Z's Other Jewelry">Other Jewelry</a></li>
+              <li id="menu-item-1030" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1030"><a href="/product-category/zzcollection/more/" title="View Z&Z's Other Jewelry">Other Jewelry</a></li>
               <li id="menu-item-1039" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1039"><a href="/product-category/zzcollection/new/" title="View Z&Z's What’s New">What’s New</a></li>
             </ul>
             <ul class="sub-menu">
               <li id="menu-item-1041" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1041"><a href="/product-category/topten/" title="View Z&Z's Our Top Ten">Our Top Ten</a></li>
-              <li id="menu-item-1151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1151"><a href="#" title="View Z&Z's Special Occasions">Special Occasions</a></li>
+              <li id="menu-item-1151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1151"><a href="#" title="View Z&Z's Special Occasions">Special Occasions</a></li>
               <li id="menu-item-1048" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1048"><a href="/product-category/affordable-gifts/">Gifts under $600</a></li>
             </ul>
           </div>
         </li>
       </li>
       <li id="menu-item-1105" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1105"><a href="/category/upcoming-shows/" title="View Z&Z's upcoming shows"><span class="hidden-tablet--inline">Upcoming</span> Shows</a></li>
-      <li id="menu-item-1104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1104"><a href="/our-story/" title="View Z&Z's story"><span class="hidden-tablet--inline">Our</span> Story</a></li>
-      <li id="menu-item-1146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1146"><a href="/our-services/" title="View Z&Z's services ">Services</a></li>
+      <li id="menu-item-1104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1104"><a href="/our-story/" title="View Z&Z's story"><span class="hidden-tablet--inline">Our</span> Story</a></li>
+      <li id="menu-item-1146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1146"><a href="/our-services/" title="View Z&Z's services ">Services</a>
+        <div class="subnav">
+          <ul class="sub-menu">
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1014"><a href="/our-services#appraisals" title="View Z&Z's appraisal service">Appraisals</a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1018"><a href="/our-services#custom" title="View Z&Z's custom design service">Custom Design</a></li>
+          </ul>
+          <ul class="sub-menu">
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1022"><a href="/our-services#education" title="View Z&Z's education service">Education</a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1026"><a href="/our-services#redesign" title="View Z&Z's re-sale service">Re-Design &amp; Re-Sale</a></li>
+          </ul>
+          <ul class="sub-menu">
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-1026"><a href="/our-services#cleaning" title="View Z&Z's jewelry cleaning service">Jewelry Cleaning</a></li>
+          </ul>
+        </div>
+      </li>
       <li id="menu-item-1150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1150"><a href="/contact-us/" title="View Z&Z's contact inforation">Contact <span class="hidden-tablet--inline">Us</span></a></li>
     </ul>
     <div class="is-visible-tablet mobile-search">
