@@ -20,17 +20,18 @@
 // Sorting form
 .woocommerce-ordering,
 .storefront-sorting {
-  display: block;
-  margin: 0 auto;
-  padding-left: 25px;
-  position: relative;
-  text-align: left;
+  display: none;
+  // display: block;
+  // margin: 0 auto;
+  // padding-left: 25px;
+  // position: relative;
+  // text-align: left;
 
-  @include breakpoint(md) { padding-left: 30px; }
+  // @include breakpoint(md) { padding-left: 30px; }
 
-  @include breakpoint(lg) {
-    padding-left: 40px;
-  }
+  // @include breakpoint(lg) {
+  //   padding-left: 40px;
+  // }
 }
 
 .products {
@@ -42,6 +43,10 @@
   padding: 0 20px 50px 20px;
 
   @include breakpoint(md) { flex-direction: row; }
+
+  &.products--shrink .product-category {
+    @include breakpoint(lg) { width: 25%; }
+  }
 
   // Show 3 across on desktop
   .product-category {
@@ -284,7 +289,8 @@
 }
 
 .woocommerce-product-gallery__image {
-  // &:nth-child(2) { display: none; }
+  a { display: block; }
+  &:nth-child(2) { display: none; }
 }
 
 .flex-control-nav.flex-control-thumbs {
