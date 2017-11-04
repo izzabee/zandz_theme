@@ -144,3 +144,25 @@
   padding: 10px;
   width: 100%;
 }
+
+.wishlist_table {
+  font-size: 90%;
+  text-align: center;
+
+  .product-name { text-align: center; }
+
+  .product-thumbnail {
+    display: table-cell !important;
+    padding: 0;
+    width: 200px;
+
+    a {
+      max-width: none;
+      @extend .svg-hover;
+    }
+
+    @include breakpoint(md) { padding: 6px 12px; }
+  }
+
+  .product-remove a { @extend .svg-hover }
+}

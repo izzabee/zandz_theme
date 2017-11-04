@@ -21,6 +21,7 @@
 .woocommerce-ordering,
 .storefront-sorting {
   display: none;
+
   // display: block;
   // margin: 0 auto;
   // padding-left: 25px;
@@ -45,10 +46,6 @@
 
   @include breakpoint(md) { flex-direction: row; }
 
-  &.products--shrink .product-category {
-    @include breakpoint(lg) { width: 25%; }
-  }
-
   // Show 3 across on desktop
   .product-category {
     padding: 0 !important;
@@ -69,23 +66,25 @@
   .product {
     font-family: $font-sans-serif;
 
+    // img { opacity: 0; }
+
     a {
+      // background-size: cover;
+      // background-position: center;
+      // background-repeat: no-repeat;
+
       color: $navy;
       display: block;
       margin: 10px auto;
       position: relative;
       text-decoration: none;
+      width: 90%;
 
       &:hover:after { width: 0; }
     }
 
     // Hide price, count and "add to cart" on index pages
     .count, .price { display: none; }
-
-    img {
-      height: auto;
-      width: 100%;
-    }
 
     &:hover {
       .woocommerce-loop-product__title,
@@ -123,7 +122,7 @@
   margin: 0;
   max-height: 300px;
   overflow: auto;
-  padding: 20px 0;
+  padding: 10px 0;
   position: absolute;
   text-align: center;
   transition: all 0.3s;
@@ -146,18 +145,14 @@
   }
 
   @include breakpoint(md) {
+    background-color: $purple;
     max-height: 0;
     overflow: hidden;
     padding: 0;
+
+    &:before { border-bottom: 20px solid $purple; }
   }
 }
-
-.woocommerce-loop-category__title {
-  max-height: 300px;
-  overflow: auto;
-  padding: 20px 0;
-}
-
 
 // Detail page
 // ======================================================================================================
@@ -191,6 +186,7 @@
 
   @include breakpoint(md) {
     order: 1;
+    padding: 15px 30px;
     width: 50%
   }
 }
@@ -251,11 +247,6 @@
   ul {
     margin: 0 auto;
     width: 100%;
-    @include breakpoint(md) { width: 80%; }
-  }
-
-  .products {
-    @include breakpoint(md) { width: 80%; }
   }
 }
 

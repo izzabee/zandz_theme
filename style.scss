@@ -127,6 +127,8 @@ input#s {
   position: relative;
   text-align: center;
 
+  a:after { background: $navy; }
+
   p { margin: 0; padding-bottom: 5px;}
 
   p + p { font-style: italic; }

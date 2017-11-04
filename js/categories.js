@@ -7,15 +7,15 @@
     $cartegoryList = $body.find('ul.products'),
     $categories = $cartegoryList.find('.product-category')
 
-  // Check for # of categories to update product widths
-  function dynamicCategoryWidth () {
-    if ($categories.length === 4) {
-      $cartegoryList.addClass('products--shrink')
-    }
+  function setBackgroundImage() {
+    $categories.each(function() {
+      var imageUrl = $(this).find('img').attr('src')
+      $(this).find('a').css('background-image', `url(${imageUrl})`)
+    })
   }
 
   $(document).ready(function() {
-    dynamicCategoryWidth();
+    // add functions here
   });
 
 })( jQuery );
