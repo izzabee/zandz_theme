@@ -178,7 +178,7 @@ header {
     top: 23px;
     transform: translateX(-50%);
     width: 100px;
-    z-index: 9; }
+    z-index: 10; }
   .site-header.is-sticky .primary-navigation {
     position: fixed;
     top: 0; }
@@ -205,7 +205,9 @@ header {
     .site-header.is-sticky .site-search {
       right: 60px; }
     .site-header.is-sticky .svg-text {
-      display: inline; } }
+      display: inline; }
+    .site-header.is-sticky .nav-menu {
+      margin: 0; } }
 
 .site-branding {
   padding: 10px;
@@ -234,7 +236,7 @@ header {
   overflow: hidden;
   transition: max-height 0.3s;
   width: 100%;
-  z-index: 11; }
+  z-index: 9; }
   .primary-navigation.is-closed {
     max-height: 0; }
   @media (min-width: 767px) {
@@ -251,19 +253,19 @@ header {
   list-style: none;
   margin: 0;
   overflow: hidden;
+  transition: all 0.6s;
   width: 100%; }
   @media (min-width: 767px) {
     .nav-menu {
       flex-direction: row;
-      margin: auto;
+      margin: 0 10%;
       padding: 0;
       width: 80%; } }
   @media (min-width: 1024px) {
     .nav-menu {
-      margin: auto; } }
+      margin: 0 10%; } }
   @media (min-width: 1280px) {
     .nav-menu {
-      margin: 0;
       padding: 0 100px; } }
 
 .nav-menu > .menu-item {
@@ -356,11 +358,12 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  right: 60px;
-  width: 100%;
   position: fixed;
+  right: 60px;
   top: 21px;
-  z-index: 9; }
+  transition: all 0.6s;
+  width: 100%;
+  z-index: 10; }
   .site-search form {
     margin: 0 5px; }
   .site-search #menu-secondary {
@@ -391,6 +394,12 @@ header {
 
 .woocommerce-product-search.is-active .search-field {
   width: 75%; }
+@media (min-width: 767px) {
+  .woocommerce-product-search.is-active .search-field {
+    width: 88%; } }
+@media (min-width: 1024px) {
+  .woocommerce-product-search.is-active .search-field {
+    width: 75%; } }
 
 .site-content {
   margin: 0 15px; }
@@ -698,7 +707,7 @@ header {
   text-align: center;
   transition: opacity 0.3s;
   width: 300px;
-  z-index: 8; }
+  z-index: 7; }
   .home-scroll-helper svg {
     width: 50px; }
   .home-scroll-helper span {
