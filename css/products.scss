@@ -162,8 +162,15 @@
   flex-wrap: wrap;
 
   // Hide "add to cart" since we're not doing e-comm
-  .cart { display: none; }
+  .cart {
+    order: 3;
+
+    .quantity,
+    .single_add_to_cart_button { display: none !important; }
+  }
+
   .woocommerce-tabs { display: none; }
+  .woocommerce-Price-amount { display: none; }
 }
 
 .related.products .product {
@@ -180,7 +187,7 @@
 
 .woocommerce-product-gallery {
   flex-grow: 2;
-  order: 2;
+  order: 1;
   padding: 15px;
   width: 100%;
 
@@ -202,7 +209,7 @@
   flex-grow: 2;
   font-family: $font-sans-serif;
   font-size: 1.1rem;
-  order: 1;
+  order: 2;
   padding: 20px;
   width: 100%;
 
@@ -213,13 +220,13 @@
 
     > h1,
     > p,
-    > div { padding-left: 50px; }
+    > div,
+    .tinv-wishlist { padding-left: 50px; }
   }
-
 
   .product_title { order: 1; }
   .price { order: 4 }
-  .yith-wcwl-add-to-wishlist { order: 5; }
+  .tinv-wishlist { order: 5; }
   .product_meta {
     padding-bottom: 30px;
     order: 2;
@@ -306,6 +313,7 @@
   }
 }
 
+.ajax_add_to_cart,
 .add_to_cart_button { display: none !important; }
 
 // Infinite scroll loader

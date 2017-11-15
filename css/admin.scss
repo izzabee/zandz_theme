@@ -23,13 +23,13 @@
 }
 
 .woocommerce-message {
-  background: $transparent-purple;
-  border-top-color: $purpleDark;
+  background: $transparent-purple !important;
+  border-top-color: $purpleDark !important;
   display: block;
   position: relative;
   width: 100%;
 
-  &:before { color: $purpleDark; }
+  &:before { color: $purpleDark !important; }
 }
 
 .woocommerce-MyAccount-navigation {
@@ -145,24 +145,48 @@
   width: 100%;
 }
 
-.wishlist_table {
-  font-size: 90%;
-  text-align: center;
+.tinv-header { display: none; }
 
-  .product-name { text-align: center; }
-
-  .product-thumbnail {
-    display: table-cell !important;
-    padding: 0;
-    width: 200px;
-
-    a {
-      max-width: none;
-      @extend .svg-hover;
-    }
-
-    @include breakpoint(md) { padding: 6px 12px; }
-  }
-
-  .product-remove a { @extend .svg-hover }
+.tinv-wishlist {
+  form { width: 100%; }
 }
+
+.tinv-wishlist .product-thumbnail { width: auto !important; }
+
+.product-remove {
+  display: block;
+  @include breakpoint(md) { display: table-cell; }
+
+  button {
+    transition: opacity 0.6s;
+    &:hover { opacity: 0.6; cursor: pointer; }
+  }
+}
+
+// .shop_table,
+// .wishlist_table {
+//   // background-color: $transparent-purple;
+//   border: none;
+//   font-size: 90%;
+//   text-align: center;
+
+//   .product-name { text-align: center; }
+
+//   .product-thumbnail {
+//     display: table-cell !important;
+//     padding: 0;
+//     width: 200px;
+
+//     a {
+//       max-width: none;
+//       @extend .svg-hover;
+//     }
+
+//     @include breakpoint(md) { padding: 6px 12px; }
+
+//     tr { border: none;}
+//     tr:nth-of-type(odd) { background-color: $transparent-purple; }
+//   }
+
+//   .product-remove a { @extend .svg-hover; }
+// }

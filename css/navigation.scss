@@ -48,12 +48,6 @@ header { top: 65px; }
     z-index: 9;
   }
 
-  .site-search {
-    position: fixed;
-    top: 23px;
-    z-index: 9;
-  }
-
   .primary-navigation {
     position: fixed;
     top: 0;
@@ -73,6 +67,7 @@ header { top: 65px; }
   @include breakpoint(lg) {
     .custom-logo { left: 30px; }
     .site-search { right: 30px; }
+    .svg-text { display: none; }
   }
 
   @include breakpoint(xl) {
@@ -82,6 +77,7 @@ header { top: 65px; }
       width: 100px;
     }
     .site-search { right: 60px; }
+    .svg-text { display: inline; }
   }
 }
 
@@ -105,7 +101,10 @@ header { top: 65px; }
   }
 }
 
-.custom-logo-link { display: inline-block; }
+.custom-logo-link {
+  display: inline-block;
+  &:hover img { opacity: 0.6; }
+}
 
 // Main nav
 .primary-navigation {
@@ -115,6 +114,7 @@ header { top: 65px; }
   overflow: hidden;
   transition: max-height 0.3s;
   width: 100%;
+  z-index: 11;
 
   &.is-closed { max-height: 0; }
 
@@ -133,19 +133,19 @@ header { top: 65px; }
   font-size: 1rem;
   justify-content: space-around;
   list-style: none;
-  margin: auto;
+  margin: 0;
   overflow: hidden;
   width: 100%;
 
   @include breakpoint(md) {
     flex-direction: row;
+    margin: auto;
     padding: 0;
     width: 80%;
   }
 
-  @include breakpoint(xl) {
-    padding: 0 100px;
-  }
+  @include breakpoint(lg) { margin: auto; }
+  @include breakpoint(xl) { margin: 0; padding: 0 100px; }
 }
 
 .nav-menu > .menu-item {
@@ -261,20 +261,27 @@ header { top: 65px; }
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  position: absolute;
   right: 60px;
-  top: 45px;
+  width: 100%;
+
+  position: fixed;
+  top: 21px;
+  z-index: 9;
 
   form { margin: 0 5px; }
   #menu-secondary {
     margin: 0;
     padding: 0;
 
+    a { color: $navy; }
     li { margin-left: 10px; }
   }
+
+  .widget_product_search { width: 25%; }
 }
 
 .search-field {
+  color: $navy;
   overflow: hidden;
   padding: 10px;
   transition: width 0.6s;
@@ -295,5 +302,5 @@ header { top: 65px; }
 }
 
 .woocommerce-product-search.is-active {
-  .search-field { width: 80%; }
+  .search-field { width: 75%; }
 }

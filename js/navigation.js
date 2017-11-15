@@ -60,8 +60,9 @@
     toggleMobileNav();
   });
 
-  // On hover reveal search
+  // On click reveal search
   $search.on('click', function() {
     toggleSearchbar();
   });
+
 })(jQuery);

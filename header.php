@@ -25,7 +25,7 @@
     <div class="col-full">
 
       <div class="site-branding">
-        <a href="http://www.zwikkerandzacher.com/" class="custom-logo-link svg-hover" rel="home" itemprop="url" title="Z&Z home">
+        <a href="http://www.zwikkerandzacher.com/" class="custom-logo-link link--no-underline" rel="home" itemprop="url" title="Z&Z home">
           <img width="230" height="94" src="http://www.zwikkerandzacher.com/wpzzofpk17/wp-content/uploads/2017/07/logo.png" class="custom-logo" alt="Zwikker and Zacher" itemprop="logo">
         </a>
       </div>
@@ -36,6 +36,7 @@
               <label class="screen-reader-text" for="woocommerce-product-search-field-0">Search for:</label>
               <input type="search" id="woocommerce-product-search-field-0" class="search-field" placeholder="Search products…" value="" name="s">
               <span class="search-submit svg-hover">
+                <span class="svg-text hidden-tablet--inline">Search</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
                 <circle fill="#FFFFFF" stroke="#182954" stroke-width="8" stroke-miterlimit="10" cx="45.3" cy="26.5" r="22.4"/>
@@ -49,6 +50,7 @@
           <ul id="menu-secondary" class="menu">
             <li id="menu-item-1089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1089 svg-hover">
               <a href="http://www.zwikkerandzacher.com/account/" title="View my Z&Z account" class="link--no-underline">
+                <span class="svg-text hidden-tablet--inline">Account</span>
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="7.1 0 57.8 57.6" enable-background="new 7.1 0 57.8 57.6" xml:space="preserve">
                 <path fill="#182954" d="M64.8,57.6v-6c0-2.9-1.9-5.4-4.5-6.3l0,0c-0.2-0.1-13.7-3.5-15.6-7.3c-0.9-1.8,0-4,0.9-5.5c0.4-0.5,0.8-1.1,1.2-1.7
@@ -60,6 +62,7 @@
           </li>
           <li id="menu-item-1090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1090 svg-hover">
             <a href="http://www.zwikkerandzacher.com/wishlist/" title="View my Z&Z wishlist" class="link--no-underline">
+              <span class="svg-text hidden-tablet--inline">Wishlist</span>
               <svg version="1.1"
               id="Layer_1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 65"
