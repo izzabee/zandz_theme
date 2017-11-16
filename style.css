@@ -679,7 +679,7 @@ header {
     position: absolute;
     top: 50%;
     transform: translateX(-50%); }
-  @media (min-width: 767px) {
+  @media (min-width: 1024px) {
     .home-section {
       background-attachment: fixed; }
       .home-section .large-link {

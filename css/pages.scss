@@ -28,7 +28,7 @@
     transform: translateX(-50%);
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     background-attachment: fixed;
 
     .large-link {
