@@ -13,4 +13,12 @@ function zandz_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'zandz_scripts' );
 
+// Woocommerce wishlist button override
+function skyverge_change_empty_cart_button_url() {
+  // return get_site_url();
+  return '/product-category/zzcollection/';
+}
+
+add_filter( 'woocommerce_return_to_shop_redirect', 'skyverge_change_empty_cart_button_url' );
+
 ?>

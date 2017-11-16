@@ -450,7 +450,9 @@ header {
       margin: 10px auto;
       position: relative;
       text-decoration: none;
-      width: 90%; }
+      width: 90%;
+      max-height: 300px;
+      overflow: hidden; }
       .products .product a:hover:after {
         width: 0; }
     .products .product .count, .products .product .price {
