@@ -72,13 +72,11 @@ header { top: 65px; }
 
   @include breakpoint(xl) {
     .custom-logo {
-      left: 45px;
       top: 10px;
       width: 100px;
     }
-    .site-search { right: 60px; }
-    .svg-text { display: inline; }
 
+    .svg-text { display: inline; }
     .nav-menu { margin: 0; }
   }
 }
@@ -268,10 +266,10 @@ header { top: 65px; }
   right: 60px;
   top: 21px;
   transition: all 0.6s;
-  width: 100%;
+  width: 30%;
   z-index: 10;
 
-  form { margin: 0 5px; }
+  form { margin-right: 5px; }
   #menu-secondary {
     margin: 0;
     padding: 0;
@@ -280,19 +278,25 @@ header { top: 65px; }
     li { margin-left: 10px; }
   }
 
-  .widget_product_search { width: 25%; }
+  .widget_product_search {
+    overflow: visible;
+    white-space: nowrap;
+    width: auto;
+  }
 }
+
+.menu-secondary-container { white-space: nowrap; }
 
 .search-field {
   color: $navy;
   overflow: hidden;
   padding: 10px;
-  transition: width 0.6s;
-  width: 80%;
+  transition: all 0.6s;
+  max-width: 80%;
 
   @include breakpoint(md) {
     padding: 0;
-    width: 0;
+    max-width: 0;
   }
 }
 
@@ -305,8 +309,11 @@ header { top: 65px; }
 }
 
 .woocommerce-product-search.is-active {
-  .search-field { width: 75%; }
+  .search-field {
+    max-width: 75%;
+    width: auto;
+  }
 
-  @include breakpoint(md) { .search-field { width: 88%; } }
-  @include breakpoint(lg) { .search-field { width: 75%; } }
+  @include breakpoint(md) { .search-field { max-width: 88%; } }
+  @include breakpoint(lg) { .search-field { max-width: 75%; } }
 }

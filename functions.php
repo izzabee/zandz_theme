@@ -19,6 +19,12 @@ function skyverge_change_empty_cart_button_url() {
   return '/product-category/zzcollection/';
 }
 
+add_image_size( 'zandz-featured-image', 2000, 1200, false );
+
 add_filter( 'woocommerce_return_to_shop_redirect', 'skyverge_change_empty_cart_button_url' );
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+
+function woocommerce_support() { add_theme_support( 'woocommerce' ); }
 
 ?>
