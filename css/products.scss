@@ -45,6 +45,15 @@
 
   @include breakpoint(md) { flex-direction: row; }
 
+  // Show 3 across on desktop
+  .product-category {
+    padding: 0 !important;
+    width: 100%;
+
+    @include breakpoint(md) { width: 50%; }
+    @include breakpoint(lg) { width: 33%; }
+  }
+
   // Show 4 across on desktop
   .product-type-simple {
     width: 100%;
@@ -70,21 +79,10 @@
       text-decoration: none;
       width: 90%;
 
-      max-height: 250px;
+      max-height: 300px;
       overflow: hidden;
 
       &:hover:after { width: 0; }
-    }
-
-    // Show 3 across on desktop
-    .product-category {
-      padding: 0 !important;
-      width: 100%;
-
-      @include breakpoint(md) { width: 50%; }
-      @include breakpoint(lg) { width: 33%; }
-
-      a { max-height: 300px; }
     }
 
     // Hide price, count and "add to cart" on index pages
