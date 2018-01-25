@@ -1,6 +1,5 @@
 <div id="content" class="site-content" tabindex="-1">
   <div class="col-full">
-
     <nav class="woocommerce-breadcrumb"><a href="http://www.zwikkerandzacher.com">Home</a><span class="breadcrumb-separator"> / </span><a href="http://www.zwikkerandzacher.com/product-category/zzcollection/">Collection</a><span class="breadcrumb-separator"> / </span><a href="http://www.zwikkerandzacher.com/product-category/zzcollection/earrings/">Earrings</a><span class="breadcrumb-separator"> / </span>E561</nav><div class="woocommerce"></div>
     <div id="primary" class="content-area">
       <main id="main" class="site-main" role="main">

@@ -1,0 +1,49 @@
+// ======================================================================================================
+//
+// Modal styles
+//
+// ======================================================================================================
+
+body.modal-open {
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal {
+  background: rgba(#000, 0.8);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.modal__img {
+  height: auto;
+  width: 80%;
+  @include center-all();
+
+  @include breakpoint(lg) {
+    height: 80%;
+    width: auto;
+  }
+}
+
+.modal__close {
+  color: $white;
+  font-weight: 900;
+  left: 50%;
+  position: absolute;
+  right: unset;
+  top: 30px;
+  top: 30px;
+  transform: translateX(-50%);
+
+  &:hover { cursor: pointer; }
+
+  @include breakpoint(lg) {
+    left: unset;
+    right: 30px;
+    transform: none;
+  }
+}

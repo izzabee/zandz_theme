@@ -4,7 +4,7 @@
 
   $(document).ready(function() {
     $('.flex-viewport').flexslider();
-    $('.woocommerce-product-gallery__image a').zoom({
+    $('.woocommerce-product-gallery__image').first().children().zoom({
       magnify: 2
     });
   });

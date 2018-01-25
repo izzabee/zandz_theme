@@ -65,25 +65,22 @@
   .product {
     font-family: $font-sans-serif;
 
-    // img { opacity: 0; }
-
     a {
-      // background-size: cover;
-      // background-position: center;
-      // background-repeat: no-repeat;
-
       color: $navy;
       display: block;
       margin: 10px auto;
+      height: 250px;
+      overflow: hidden;
       position: relative;
       text-decoration: none;
       width: 90%;
 
-      max-height: 300px;
-      overflow: hidden;
-
       &:hover:after { width: 0; }
     }
+
+    img { @include center-vert(); }
+
+    &.product-category a { height: 300px; }
 
     // Hide price, count and "add to cart" on index pages
     .count, .price { display: none; }
@@ -289,9 +286,18 @@
   z-index: 8;
 }
 
+
+// Gallery images
+.woocommerce-product-gallery__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .woocommerce-product-gallery__image {
   a { display: block; }
-  &:nth-child(2) { display: none; }
+  &:first-child { flex-grow: 2; }
 }
 
 .flex-control-nav.flex-control-thumbs {
@@ -302,9 +308,6 @@
 
   li { padding-right: 30px; }
 }
-
-// .attachment-shop_single,
-// .zoomImg { display: none !important; }
 
 // Woocommerce Overrides
 .flex-viewport { height: auto !important; }
